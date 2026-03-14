@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Highest upper band and lowest lower band and highest difference between upper and lower band for 10,000.
+
+sort2 uses: Merge Sort
+
+How do you know?: same upper and lower band. Middle lower band.
+
+sort3 uses: Selection Sort
+
+How do you know?: Same upper and lower band. High upper band.
