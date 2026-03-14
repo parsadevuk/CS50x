@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted | C$50 Finance 💰
+{% endblock %}
+
+{% block main %}
+
+<b>{{ stock.name }}</b> ({{ stock.symbol }}) — {{ stock.price | usd }}
+
+{% endblock %}

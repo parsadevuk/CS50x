@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+[data-theme="serene-skies"] {
+    --bg-main:       #FBE0C3;
+    --accent-soft:   #FFBB98;
+    --accent-strong: #7D8E95;
+    --text-dark:     #344648;
+    --matt-black:    #0d0b09;
+    --matt-white:    #fffcfa;
+    --theme-color:   #FFBB98;
+}
+
+body {
+    background-color: #FBE0C3;
+    color: #344648;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    width: 90%;
+}
+
+.header {
+    background-color: #7D8E95;
+    color: #fffcfa;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.section {
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.section:hover {
+    background-color: #FFBB98;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 48px;
+}
+
+button, input[type="submit"] {
+    background-color: #FFBB98;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    vertical-align: middle;
+}
+
+input[type="text"], input[type="number"] {
+    line-height: 1.8;
+    width: 25%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+input[type="text"]:hover, input[type="number"]:hover {
+    background-color: #FBE0C3;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+table {
+    background-color: transparent;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+table th,
+table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 187, 152, 0.3);
+}
+
+tbody tr:hover {
+    background-color: #e8e4e0;
+    transition: background-color 0.15s ease-in-out;
+}

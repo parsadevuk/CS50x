@@ -1,0 +1,13 @@
+        # Query database for username
+        elif rows = db.execute(
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
+        )
+        return apology("Username already exist", 403)
+        elif rows =! db.execute(
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
+        )
+        hashed_password = generate_password_hash(request.form.get("password"))
+            rows = db.execute(
+            "INSERT * FROM users WHERE username = ? && password= ?", request.form.get("username"), hashed_password
+        )
+        return render_template("login.html")

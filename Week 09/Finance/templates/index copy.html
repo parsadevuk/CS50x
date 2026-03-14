@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index | C$50 Finance 💰
+{% endblock %}
+
+{% block main %}
+
+div class="section">
+
+                <h2>All Birthdays</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+<tbody>
+                        {% for birthday in birthdays %}
+                        <tr>
+                            {% if edit_id == birthday.id %}
+                                <form action="/edit" method="post">
+                                    <input type="hidden" name="id" value="{{ birthday.id }}">
+                                    <td><input type="text" name="name" value="{{ birthday.name }}"></td>
+                                    <td>
+                                        <input type="number" name="month" value="{{ birthday.month }}" style="width:50px">
+                                        /
+                                        <input type="number" name="day" value="{{ birthday.day }}" style="width:50px">
+                                    </td>
+                                    <td><input type="submit" value="Save"></td>
+                                </form>
+                            {% else %}
+                                <td>{{ birthday.name }}</td>
+                                <td>{{ birthday.month }}/{{ birthday.day }}</td>
+                                <td>
+                                    <form action="/edit_mode" method="post">
+                                        <input type="hidden" name="id" value="{{ birthday.id }}">
+                                        <input type="submit" value="Edit">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/delete" method="post">
+                                        <input type="hidden" name="id" value="{{ birthday.id }}">
+                                        <input type="submit" value="Delete">
+                                    </form>
+                                </td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+{% endblock %}

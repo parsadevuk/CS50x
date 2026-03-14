@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio | C$50 Finance 💰
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in portfolio %}
+            <tr>
+                <td>{{ row.symbol }}</td>
+                <td>{{ row.name }}</td>
+                <td>{{ row.shares }}</td>
+                <td>{{ row.price | usd }}</td>
+                <td>{{ row.individualEquity | usd }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+                <td class="border-0 text-end">{{ cash | usd }}</td>
+            </tr>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
+                <td class="border-0 text-end">{{ netWorth | usd }}</td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}
