@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="serene-skies">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Parsa Dev - Professional background, development philosophy, and approach to building web and mobile applications">
+    <title>About | ParsaDev - Web & Mobile App Developer</title>
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- google fonts - ubuntu -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- custom styles -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- nav bar - global section -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="Media/Parsa Dev - Logo.png" alt="ParsaDev - Web and Mobile App Developer Logo" height="40" class="me-2">
+                <span class="brand-text">ParsaDev</span>
+            </a>
+
+            <!-- desktop theme dropdown -->
+            <div class="dropdown d-none d-lg-block order-lg-last ms-3">
+                <button class="btn btn-theme-toggle dropdown-toggle" type="button" id="themeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-palette"></i> Theme
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+                    <li><a class="dropdown-item" href="#" onclick="changeTheme('lavender-aroma')">Lavender Aroma</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeTheme('serene-skies')">Serene Skies</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeTheme('outdoor-yoga')">Outdoor Yoga</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeTheme('alluring-apothecary')">Alluring Apothecary</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeTheme('wellness-spa')">Wellness Spa</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeTheme('vibrant-bowl')">Vibrant Bowl</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeTheme('starry-blue')">Starry Blue</a></li>
+                </ul>
+            </div>
+
+            <!-- hamburger btn -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- nav links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="skills.html">Skills & Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- mobile theme picker with colored squares -->
+                <div class="mobile-theme-selector">
+                    <h6 class="text-center text-matt-white mb-3">Select Theme</h6>
+                    <div class="theme-grid">
+                        <div class="theme-square" data-theme="lavender-aroma" title="Lavender Aroma theme"></div>
+                        <div class="theme-square active" data-theme="serene-skies" title="Serene Skies theme"></div>
+                        <div class="theme-square" data-theme="outdoor-yoga" title="Outdoor Yoga theme"></div>
+                        <div class="theme-square" data-theme="alluring-apothecary" title="Alluring Apothecary theme"></div>
+                        <div class="theme-square" data-theme="wellness-spa" title="Wellness Spa theme"></div>
+                        <div class="theme-square" data-theme="vibrant-bowl" title="Vibrant Bowl theme"></div>
+                        <div class="theme-square" data-theme="starry-blue" title="Starry Blue theme"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero section -->
+    <section class="hero-section py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <h1 class="display-4 fw-bold mb-3">Background & Approach</h1>
+                    <p class="lead mb-4">
+                        I'm a developer who works primarily in Python, C, SQL, and Swift for iOS development. My background combines strong programming fundamentals with practical, real-world application development.
+                    </p>
+                    <p class="mb-4">
+                        Unlike many developers who rely entirely on frameworks and libraries, I've spent time understanding how things work beneath the surface—memory management, algorithm efficiency, data structures. This means I can debug problems others might struggle with and build systems that don't fall apart under pressure.
+                    </p>
+                    <p class="mb-4">
+                        I've worked on everything from small business iOS apps to larger web platforms, always with the same goal: create something that works properly and makes life easier for whoever uses it.
+                    </p>
+                </div>
+                <div class="col-lg-5 order-1 order-lg-2">
+                    <img src="Media/About Page - S1.jpg" alt="Professional developer working on complex programming challenges" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- education section -->
+    <section class="content-section py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-5">
+                    <img src="Media/About Page - S2.jpg" alt="Computer science education and continuous learning" class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="section-title mb-4">Education & Foundations</h2>
+                    <p class="mb-4">
+                        Through CS50x and CS50's Introduction to Artificial Intelligence with Python, I've developed solid foundations in:
+                    </p>
+
+                    <div class="service-item mb-4">
+                        <h4 class="fw-bold text-accent mb-2">Algorithms and problem-solving</h4>
+                        <p>Understanding how to approach complex problems systematically rather than guessing and hoping.</p>
+                    </div>
+
+                    <div class="service-item mb-4">
+                        <h4 class="fw-bold text-accent mb-2">Data structures and efficiency</h4>
+                        <p>Knowing when to use which structure and why it matters for performance.</p>
+                    </div>
+
+                    <div class="service-item mb-4">
+                        <h4 class="fw-bold text-accent mb-2">Machine learning and AI concepts</h4>
+                        <p>Not just using AI tools, but understanding how they function and when they're appropriate.</p>
+                    </div>
+
+                    <p class="mt-4">
+                        These courses emphasise thinking before coding, which prevents the kind of fragile, patch-covered systems that plague many projects. You design it properly first, then you build it properly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- philosophy section -->
+    <section class="content-section-alt py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <h2 class="section-title mb-4">Development Philosophy</h2>
+                    <p class="mb-4">
+                        Good software should be simple to use, logical in structure, and built with clear purpose.
+                    </p>
+                    <p class="mb-4">
+                        I don't believe in overengineering. If a straightforward solution exists, that's the one to use. Complexity should only appear when the problem genuinely requires it.
+                    </p>
+                    <p class="mb-4">
+                        When I write code, I write it as if someone else will need to maintain it—because they probably will. Clear naming, logical organisation, and proper documentation aren't optional extras; they're fundamental requirements.
+                    </p>
+                    <p class="mb-4">
+                        Most importantly, I build with real users in mind. An application that solves a problem but frustrates everyone who uses it hasn't actually solved anything.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="skills.html" class="btn btn-outline-custom">View My Skills</a>
+                        <a href="contact.html" class="btn btn-outline-custom">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 order-1 order-lg-2">
+                    <img src="Media/About Page - S3.jpg" alt="Clean code and thoughtful software architecture" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer - global section -->
+    <footer class="footer-custom py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">ParsaDev</h5>
+                    <p class="mb-0">Web and mobile app developer specialising in Python, Swift, and AI integration solutions.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="footer-link">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="footer-link">About</a></li>
+                        <li class="mb-2"><a href="skills.html" class="footer-link">Skills & Services</a></li>
+                        <li class="mb-2"><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Connect</h5>
+                    <p class="mb-2">
+                        <i class="bi bi-globe me-2"></i>
+                        <a href="https://parsadev.co.uk" class="footer-link" target="_blank">parsadev.co.uk</a>
+                    </p>
+                    <p class="mb-2">
+                        <i class="bi bi-envelope me-2"></i>
+                        <a href="mailto:parsa.dev.uk@gmail.com" class="footer-link">parsa.dev.uk@gmail.com</a>
+                    </p>
+                    <p class="mb-0">
+                        <i class="bi bi-envelope me-2"></i>
+                        <a href="mailto:parsa@parsadev.com" class="footer-link">parsa@parsadev.com</a>
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4 footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2026 ParsaDev. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- theme switching -->
+    <script>
+        // changes the theme colour
+        function changeTheme(themeName) {
+            document.documentElement.setAttribute('data-theme', themeName);
+            localStorage.setItem('selectedTheme', themeName);
+
+            // update mobile squares
+            const squares = document.querySelectorAll('.theme-square');
+            squares.forEach(square => {
+                if (square.getAttribute('data-theme') === themeName) {
+                    square.classList.add('active');
+                } else {
+                    square.classList.remove('active');
+                }
+            });
+        }
+
+        // load saved theme when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('selectedTheme') || 'serene-skies';
+            changeTheme(savedTheme);
+
+            // click handler for mobile squares
+            const themeSquares = document.querySelectorAll('.theme-square');
+            themeSquares.forEach(square => {
+                square.addEventListener('click', function() {
+                    const selectedTheme = this.getAttribute('data-theme');
+                    changeTheme(selectedTheme);
+                });
+            });
+        });
+
+        // smooth scrolling for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // fade in animation on scroll - stackoverflow one
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

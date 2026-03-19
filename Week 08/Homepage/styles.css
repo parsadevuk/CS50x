@@ -1,0 +1,570 @@
+/* 
+   parsa dev website styles
+   font: ubuntu
+   7 colour themes
+*/
+
+/* ========================================
+   theme colours
+   ======================================== */
+
+/* lavender aroma */
+[data-theme="lavender-aroma"] {
+    --bg-main: #F4F2F3;
+    --accent-soft: #C0A9BD;
+    --accent-strong: #94A7AE;
+    --text-dark: #64766A;
+    --matt-black: #0a0909;
+    --matt-white: #fdfcfd;
+    --theme-color: #C0A9BD;
+}
+
+/* serene skies - default */
+[data-theme="serene-skies"] {
+    --bg-main: #FBE0C3;
+    --accent-soft: #FFBB98;
+    --accent-strong: #7D8E95;
+    --text-dark: #344648;
+    --matt-black: #0d0b09;
+    --matt-white: #fffcfa;
+    --theme-color: #FFBB98;
+}
+
+/* outdoor yoga */
+[data-theme="outdoor-yoga"] {
+    --bg-main: #C3CBD6;
+    --accent-soft: #748B6F;
+    --accent-strong: #2A403D;
+    --text-dark: #2A403D;
+    --matt-black: #090b0a;
+    --matt-white: #fcfdfd;
+    --theme-color: #748B6F;
+}
+
+/* alluring apothecary */
+[data-theme="alluring-apothecary"] {
+    --bg-main: #FFD5AF;
+    --accent-soft: #E59A59;
+    --accent-strong: #888870;
+    --text-dark: #712E1E;
+    --matt-black: #0e0906;
+    --matt-white: #fffdf9;
+    --theme-color: #E59A59;
+}
+
+/* wellness spa */
+[data-theme="wellness-spa"] {
+    --bg-main: #F6F4E8;
+    --accent-soft: #BACEC1;
+    --accent-strong: #E59560;
+    --text-dark: #1D3124;
+    --matt-black: #080a09;
+    --matt-white: #fdfdf9;
+    --theme-color: #BACEC1;
+}
+
+/* vibrant bowl */
+[data-theme="vibrant-bowl"] {
+    --bg-main: #F8EFEA;
+    --accent-soft: #DED369;
+    --accent-strong: #E0475B;
+    --text-dark: #192F01;
+    --matt-black: #0f1300;
+    --matt-white: #fffcf9;
+    --theme-color: #E0475B;
+}
+
+/* starry blue */
+[data-theme="starry-blue"] {
+    --bg-main: #F2EBE5;
+    --accent-soft: #647295;
+    --accent-strong: #9F496E;
+    --text-dark: #2B262D;
+    --matt-black: #080809;
+    --matt-white: #fdfcfd;
+    --theme-color: #647295;
+}
+
+/* ========================================
+   basic setup
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--matt-black);
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+/* headings useing matt black */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--matt-black);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-strong);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--text-dark);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========================================
+   nav bar - global section
+   ======================================== */
+
+.navbar-custom {
+    background-color: var(--text-dark);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* logo */
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+}
+
+/* all nav text is white matt so its readable */
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: var(--matt-white) !important;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.25rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: var(--accent-soft);
+    color: var(--matt-black) !important;
+}
+
+/* hamburger btn */
+.navbar-toggler {
+    border-color: var(--matt-white);
+    background-color: var(--accent-soft);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ========================================
+   theme switcher
+   desktop has dropdown, mobile has squares
+   ======================================== */
+
+/* theme btn matches nav links */
+.btn-theme-toggle {
+    background-color: transparent;
+    color: var(--matt-white);
+    border: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.btn-theme-toggle:hover {
+    background-color: var(--accent-soft);
+    color: var(--matt-black);
+}
+
+/* dropdown menu */
+.dropdown-menu {
+    background-color: var(--bg-main);
+    border: 2px solid var(--accent-soft);
+}
+
+.dropdown-item {
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    padding-left: 2.5rem;
+    position: relative;
+}
+
+/* color square before each theme name */
+.dropdown-item::before {
+    content: '';
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1em;
+    height: 1em;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* theme squares - shows last colour from each palette */
+.dropdown-item[onclick*="lavender-aroma"]::before {
+    background-color: #64766A;
+}
+
+.dropdown-item[onclick*="serene-skies"]::before {
+    background-color: #344648;
+}
+
+.dropdown-item[onclick*="outdoor-yoga"]::before {
+    background-color: #2A403D;
+}
+
+.dropdown-item[onclick*="alluring-apothecary"]::before {
+    background-color: #712E1E;
+}
+
+.dropdown-item[onclick*="wellness-spa"]::before {
+    background-color: #1D3124;
+}
+
+.dropdown-item[onclick*="vibrant-bowl"]::before {
+    background-color: #192F01;
+}
+
+.dropdown-item[onclick*="starry-blue"]::before {
+    background-color: #2B262D;
+}
+
+.dropdown-item:hover {
+    background-color: var(--accent-soft);
+    color: var(--matt-black);
+}
+
+/* mobile theme picker with coloured squares */
+.mobile-theme-selector {
+    display: none;
+    padding: 1.5rem 0;
+}
+
+@media (max-width: 991px) {
+    .mobile-theme-selector {
+        display: block;
+    }
+}
+
+/* grid layout */
+.theme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* each square shows theme main color */
+.theme-square {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-square:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* active theme gets border */
+.theme-square.active {
+    border-color: var(--matt-black);
+    transform: scale(1.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* square colours */
+.theme-square[data-theme="lavender-aroma"] { background-color: #C0A9BD; }
+.theme-square[data-theme="serene-skies"] { background-color: #FFBB98; }
+.theme-square[data-theme="outdoor-yoga"] { background-color: #748B6F; }
+.theme-square[data-theme="alluring-apothecary"] { background-color: #E59A59; }
+.theme-square[data-theme="wellness-spa"] { background-color: #BACEC1; }
+.theme-square[data-theme="vibrant-bowl"] { background-color: #E0475B; }
+.theme-square[data-theme="starry-blue"] { background-color: #647295; }
+
+/* ========================================
+   content sections
+   ======================================== */
+
+.content-section {
+    background-color: var(--bg-main);
+    padding: 4rem 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+/* coloured box for section content */
+.section-box {
+    background-color: var(--theme-color);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+.section-title {
+    color: var(--matt-black);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* section text uses white matt for contrast */
+.section-text {
+    color: var(--matt-white);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* images with rounded corners */
+.section-image {
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
+}
+
+/* ========================================
+   buttons
+   ======================================== */
+
+.btn-custom {
+    background-color: var(--accent-strong);
+    color: var(--matt-white);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom:hover {
+    background-color: var(--text-dark);
+    color: var(--matt-white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   footer - global section
+   ======================================== */
+
+.footer-custom {
+    background-color: var(--text-dark);
+    color: var(--matt-white);
+    padding: 3rem 0 1rem;
+}
+
+.footer-custom h5 {
+    color: var(--matt-white);
+    margin-bottom: 1rem;
+}
+
+.footer-custom p {
+    color: var(--matt-white);
+    opacity: 0.9;
+}
+
+.footer-link {
+    color: var(--matt-white);
+    text-decoration: none;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--accent-soft);
+    opacity: 1;
+}
+
+.footer-divider {
+    border-color: var(--accent-soft);
+    opacity: 0.3;
+}
+
+/* ========================================
+   responsive stuff
+   ======================================== */
+
+/* tablets and smaller */
+@media (max-width: 991px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-text {
+        font-size: 1rem;
+    }
+    
+    .section-box {
+        padding: 2rem;
+    }
+    
+    .content-section {
+        padding: 3rem 0;
+    }
+}
+
+/* mobile */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-box {
+        padding: 1.5rem;
+    }
+    
+    .content-section {
+        padding: 2rem 0;
+    }
+}
+
+/* ========================================
+   animations
+   ======================================== */
+
+/* fade in when scrolling - stackoverflow one */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease;
+}
+
+/* ========================================
+   helper classes
+   ======================================== */
+
+.text-matt-black {
+    color: var(--matt-black);
+}
+
+.text-matt-white {
+    color: var(--matt-white);
+}
+
+/* bootstrap overrides - needed for theme colours to work */
+.hero-section {
+    background: linear-gradient(135deg, var(--bg-main) 0%, var(--accent-soft) 100%);
+}
+
+.content-section-alt {
+    background: linear-gradient(to bottom, var(--bg-main), var(--accent-soft));
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-strong);
+    border-radius: 2px;
+}
+
+.text-accent {
+    color: var(--accent-strong) !important;
+}
+
+.btn-cta {
+    background-color: var(--accent-strong);
+    color: var(--matt-white);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cta:hover {
+    background-color: var(--text-dark);
+    color: var(--matt-white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline-custom {
+    border: 2px solid var(--accent-strong);
+    color: var(--accent-strong);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--accent-strong);
+    color: var(--bg-main);
+    transform: translateY(-2px);
+}
+
+.service-item h4 {
+    color: var(--accent-strong);
+}
+
+.rounded-4 {
+    border-radius: 1rem !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* brand text next to logo */
+.brand-text {
+    color: var(--matt-white);
+}

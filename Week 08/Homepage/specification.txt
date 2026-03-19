@@ -1,0 +1,173 @@
+CS50 Week 8 - Homepage Specification
+ParsaDev Website
+
+
+HTML TAGS USED (need 10+)
+====================================
+
+i used these tags in my website:
+
+1. <nav> - for the navigation bar at top
+2. <section> - main content areas on each page
+3. <div> - containers and layout stuff
+4. <img> - all the images (logo and page images)
+5. <h1> <h2> <h4> - different heading sizes
+6. <p> - paragraphs for text
+7. <a> - links in nav and footer
+8. <button> - theme dropdown and hamburger menu
+9. <ul> and <li> - lists in navigation and footer
+10. <footer> - footer section at bottom
+11. <i> - bootstrap icons
+
+total = 11 different tags (more than 10 required)
+
+
+CSS PROPERTIES USED (need 5+)
+====================================
+
+these are the main css properties i used:
+
+1. background-color - for theme backgrounds and coloured sections
+2. color - text colours useing theme variables
+3. font-family - Ubuntu font throughout site
+4. padding and margin - spacing between stuff
+5. border-radius - rounded corners on images and boxes
+6. box-shadow - shadows for depth
+7. transition - smooth theme switching
+8. transform - hover effects on buttons
+9. opacity - fade effects
+
+used way more than 5
+
+
+CSS SELECTORS USED (need 5+)
+====================================
+
+different selectors i used:
+
+1. [data-theme="..."] - for theme switching
+2. .navbar-custom - class for navigation
+3. .section-box - class for content boxes
+4. h1, h2, h4 - tag selectors
+5. .theme-square[data-theme="..."] - combined selectors
+6. .btn-custom:hover - hover effects
+
+BOOTSTRAP FEATURES
+====================================
+
+bootstrap stuff i added:
+
+Navigation Bar
+- responsive navbar that collapses on mobile
+- hamburger menu for small screens
+- sticky top positioning
+
+Grid System  
+- container, row, col classes
+- responsive columns (col-lg-7, col-md-4, etc)
+- order classes for mobile (order-1, order-2)
+
+Dropdown Menu
+- theme selector dropdown
+- styled menu items
+
+Other Components
+- buttons with bootstrap classes
+- bootstrap icons
+- spacing utilities (mb-3, mt-4, py-5, etc)
+- display utilities (d-flex, d-none, d-lg-block)
+
+JAVASCRIPT USAGE
+====================================
+
+what javascript does:
+
+Theme Switching
+- desktop dropdown menu to pick themes
+- mobile color squares for theme selection  
+- changes css variables in real time
+- saves choice to localStorage
+- remembers your theme when you come back
+
+Interactive Stuff
+- click handlers for theme squares
+- updates active state on current theme
+- smooth visual feedback
+
+Other Features
+- smooth scrolling for anchor links
+- fade in animations when scrolling down
+- uses Intersection Observer API
+
+basicly makes the site interactive and remembers what theme you picked
+
+RESPONSIVE DESIGN
+====================================
+
+how it looks on different screens:
+
+Desktop (bigger than 991px)
+- full navigation with theme dropdown
+- three column footer
+- large images and text
+- theme button in top right
+
+Tablet (between 576px and 991px)  
+- hamburger menu
+- two column footer
+- theme squares in mobile menu
+- adjusted spacing
+
+Mobile (less than 576px)
+- hamburger menu
+- single column footer
+- smaller text
+- images stack vertically
+- compact layout
+
+FILE STRUCTURE  
+====================================
+
+index.html - homepage
+about.html - about page
+skills.html - skills and services page
+contact.html - contact page
+styles.css - all the theme styles
+Media/ - folder with all images
+
+
+
+SEO stuff
+- descriptive alt tags on images
+- meta descriptions
+- semantic html
+- proper heading order
+
+Accessibility  
+- aria labels on buttons
+- keyboard navigation works
+- high contrast colours
+- focus states visible
+
+Code Quality
+- clear comments
+- organized sections
+- easy to maintain
+- reusable components
+
+
+VALIDATION
+====================================
+
+html is valid - checked with w3c validator
+css is valid - no errors
+javascript works - no console errors
+
+====================================
+
+made for CS50 week 8 assignment
+uses bootstrap, custom css, and javascript
+responsive and theme switching works
+all requirements met
+
+ParsaDev 2026
