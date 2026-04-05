@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+._*
+
+# Firebase
+google-services.json
+GoogleService-Info.plist
+firebase_options.dart
+
+# Signing keys
+key.properties
+*.jks
+*.keystore
+*.pem
+*.key
+
+# Environment & credentials
+.env
+.env.*
+credentials.json
+service-account*.json
+
+# SSH keys
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# API keys / tokens
+*.secret
+*.token
